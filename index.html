@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sarah Calandro Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link rel="shortcut icon" href="http://www.sarahcalandro.com/favicon.ico" />
+
+    <!-- CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/calandro.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    
+    <!-- TypeKit -->
+	<script src="//use.typekit.net/eev5cer.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+
+  	<!-- All JavaScript at the bottom, except for Modernizr. 
+  	<script type="text/javascript" src="js/libs/modernizr.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.js"></script>-->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+		$(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+				|| location.hostname == this.hostname) {
+		
+			  var mq = window.matchMedia( "(max-width: 767px)");
+			  if (mq.matches) {
+				  var offset = 60;
+			  }
+			  else {
+				  var offset = 100;
+			  }
+			  
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			  if (target.length) {
+				$('html,body').animate({
+				  scrollTop: target.offset().top-offset
+				}, 1000);
+				return false;
+			  }
+			}
+		  });
+		});
+	</script>
+    
+    <script>
+		function loadResize () {
+			var windowHeight = document.body.offsetHeight;
+			
+			var $main = $('#container-main');
+			var $projects = $('#projects');
+			var $process = $('#process');
+			var $about = $('#about');
+			var $intro = $('#intro');
+			var $header = $('#nav-overlay');
+			
+			var padding = ((windowHeight - $header.height() - $intro.height()) / 2) - 100;
+			
+			$main.css({'min-height': windowHeight});
+			//$projects.css({'min-height': windowHeight});
+			//$process.css({'min-height': windowHeight});
+			$about.css({'min-height': windowHeight});
+			$intro.css({'padding-top': padding});
+			
+			
+			var $about = $('.container-about'),
+			aboutTop = $about.offset().top - 101;  // store original top position
+			var $aboutLink = $('#about-nav');
+			
+			var $projects = $('.container-projects'),
+			projectsTop = $projects.offset().top - 101;  // store original top position
+			var $projectsLink = $('#projects-nav');
+			
+			var $process = $('.container-process'),
+			processTop = $process.offset().top - 101;  // store original top position
+			var $processLink = $('#process-nav');
+			
+			$(window).scroll(function(e){ 
+			if ($(this).scrollTop() > projectsTop ){ 
+				$projectsLink.css({'color': 'RGB(247,111,58)'}); 
+				$processLink.css({'color': '#f7f7f7'}); 
+				$aboutLink.css({'color': '#f7f7f7'});
+			} else { 
+				$projectsLink.css({'color': '#f7f7f7'}); 
+			} 
+			}); 
+			
+			$(window).scroll(function(e){ 
+			if ($(this).scrollTop() > processTop ){ 
+				$processLink.css({'color': 'RGB(247,111,58)'});
+				$projectsLink.css({'color': '#f7f7f7'});
+				$aboutLink.css({'color': '#f7f7f7'});
+			} else { 
+				$processLink.css({'color': '#f7f7f7'}); 
+			} 
+			}); 
+			
+			$(window).scroll(function(e){ 
+			if ($(this).scrollTop() > aboutTop ){ 
+				$aboutLink.css({'color': 'RGB(247,111,58)'});
+				$projectsLink.css({'color': '#f7f7f7'});
+				$processLink.css({'color': '#f7f7f7'}); 
+			} else { 
+				$aboutLink.css({'color': '#f7f7f7'}); 
+			} 
+			});
+
+		}
+	</script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body onLoad="loadResize()">
+
+
+    <!-- Content wrapper -->
+    <div id="wrap">	
+      
+      <!-- Fixed navbar -->
+      <div id="nav-overlay" class="navbar navbar-fixed-top translucent">
+      		&nbsp;
+      </div>
+      <div class="navbar navbar-fixed-top">
+			<a href="#wrap"><img src="img/sc_logo.png"></a>
+			<div class="desktop-nav">
+                <ul>
+                    <li><a href="#projects" id="projects-nav">work</a></li>
+                    <li><a href="#process" id="process-nav">process</a></li>
+                    <li><a href="#about" id="about-nav">about me</a></li>
+                </ul>
+            </div>
+            <div class="mobile-nav">
+                <div class="menu-btn" id="menu-btn">
+                <div></div>
+                <span></span>
+                <span></span>
+                <span></span>
+                </div>
+            
+                <div class="responsive-menu">
+                   <div class="menu-header">
+                   <ul class="menu">
+                      <li class="menu-item-has-children"><a class="mobile-menu-link" href="#projects">work</a>
+                          <ul class="sub-menu">
+                            <li><a class="mobile-menu-link" href="restricted/inform.html">Inform</a></li>
+                            <li><a class="mobile-menu-link" href="restricted/livingmoney.html">Living Money</a></li>
+                            <li><a class="mobile-menu-link" href="restricted/pam.html">People & Money</a></li>
+                            <li><a class="mobile-menu-link" href="dmg.html">DMG Website</a></li>
+                            <li><a class="mobile-menu-link" href="foodconscious.html">FoodConscious</a></li>
+                            <li><a class="mobile-menu-link" href="guru.html">Guru</a></li>
+                            <li><a class="mobile-menu-link" href="bosch.html">Bosch Video</a></li>
+                            <li><a class="mobile-menu-link" href="rhythm.html">Rhythm Video</a></li>
+                          </ul>
+                      </li>
+                      <li><a class="mobile-menu-link" href="#process">process</a></li>
+                      <li><a class="mobile-menu-link" href="#about">about me</a></li>
+                   </ul>
+                   </div>
+                </div>
+            </div>
+      </div>
+
+      <!-- Begin page content -->
+      <div class="container container-main" id="container-main">
+        <h2 id="intro" style="font-family: 'museo-sans-rounded',sans-serif;">BUILD EMPATHY BEFORE<br>DESIGNING AND THE WORLD<br>WILL BE A BETTER PLACE</h2>
+        <a href="#projects"><img class="down-arrow" src="img/downArrow.png"></a>
+      </div>
+      
+      <div class="container-projects" id="projects">
+      		<div class="container">
+            	<h3>Work</h3>
+				<ul class="desktop_projects">
+                  	<li id="inform" onclick="javascript:location.href='restricted/inform.html'">
+                    	<div class="overlay">
+                        	<h5>INFORM / 2015</h5>
+                            <p>a tool that helps people who are new and inexperienced with credit manage their credit card wisely</p>
+                        </div>
+                    </li>
+                  	<li id="livingmoney" onclick="javascript:location.href='restricted/livingmoney.html'">
+                    	<div class="overlay">
+                        	<h5>LIVING MONEY / 2013</h5>
+                            <p>a banking tool that clarifies how much people have to spend after they’ve covered their obligations</p>
+                        </div>
+                    </li>
+                    <li id="pam" onclick="javascript:location.href='restricted/pam.html'">
+                    	<div class="overlay">
+                        	<h5>PEOPLE & MONEY / 2014</h5>
+                            <p>a talk I gave at Capital One’s bi-annual PAM conference about Cruise Control – a concept that came out of the Living Money project</p>
+                        </div>
+                    </li>
+                  	<li id="dmg" onclick="javascript:location.href='dmg.html'" style="cursor:pointer" class="last">
+                    	<div class="overlay">
+                            <h5>DMG WEBSITE / 2012</h5>
+                            <p>a website that connects Dupage Medical Group’s physicians and their patients through flowing, relatable health content</p>
+                        </div>
+                    </li>
+                    <li id="thesis" onclick="javascript:location.href='foodconscious.html'">
+                    	<div class="overlay">
+                        	<h5>FOODCONSCIOUS / 2011</h5>
+                            <p>a service that brings together grocery store owners and shoppers to enhance local access to healthy food</p>
+                        </div>
+                    </li>
+                  	<li id="guru" onclick="javascript:location.href='guru.html'">
+                    	<div class="overlay">
+                        	<h5>GURU / 2010</h5>
+							<p>a service that connects teens with creative professionals to develop career aspirations</p>
+                        </div>
+                    </li>
+                    <li id="bosch" onclick="javascript:location.href='bosch.html'">
+                    	<div class="overlay">
+                        	<h5>BOSCH VIDEO / 2011</h5>
+							<p>a video that teaches the value and meaning of data-mining to Bosch executives</p>
+                        </div>
+                    </li>
+                  	<li id="rhythm" class="last" onclick="javascript:location.href='rhythm.html'">
+                    	<div class="overlay">
+                        	<h5>RHYTHM VIDEO / 2010</h5>
+							<p>a video illustrating the rhythm, space, and texture of Bowspirit, an instrumental piece of music by the band Balmorhea</p>
+                        </div>
+                    </li>
+				</ul>
+                <!--
+                <ul class="mobile_projects">
+					<li>
+                        <h5>Capital One Labs / current</h5>
+                        <img src="img/thumbnails/c1Labs_thumbnail.png">
+                        <div>
+                            <p>Reimagining how people interact with their money through research, design, and product experimentation<br><i>coming soon</i></p>
+                        </div>
+                    </li>
+                  	<li style="display:none">
+                    	<h5>Polonius / 2015</h5>
+                        <img src="img/thumbnails/polonius_thumbnail.png">
+                        <div>
+                            <p>A product platform that helps people use credit wisely<br><i>coming soon</i></p>
+                        </div>
+                    </li>
+                  	<li style="display:none">
+                    	<h5>Living Money / 2013</h5>
+                        <img src="img/thumbnails/livingmoney_thumbnail.png">
+                        <div>
+                            <p>A checking product that uses a smart algorithm to help people know how much money they have after their monthly obligations<br><i>coming soon</i></p>
+                        </div>
+                    </li>
+                  	<li>
+                    	<h5>FoodConscious / 2011</h5>
+                        <img src="img/thumbnails/FoodConscious_thumbnail.png">
+                        <div>
+                            <p>A service that brings together grocery store owners and shoppers to enhance access to healthy food <br><i>coming soon</i></p>
+                        </div>
+                    </li>
+                  	<li>
+                    	<h5>DMG Website / 2012</h5>
+                        <img src="img/thumbnails/DMG_thumbnail.png">
+                        <div>
+							<p>A website that connects Dupage Medical Group’s physicians and their patients through flowing, relatable health content<br><i>coming soon</i></p>
+                        </div>
+                    </li>
+                  	<li>
+                    	<h5>GURU / 2010</h5>
+                        <img src="img/thumbnails/Guru_thumbnail.png">
+                        <div>
+							<p>A service that connects teens with creative professionals to develop future career aspirations<br>coming soon</i></p>
+                        </div>
+                    </li>
+                  	<li>
+                    	<h5>Motion Design</h5>
+                        <img src="img/thumbnails/Motion_thumbnail.png">
+                        <div>
+							<p>A selection of animation and motion design projects done in Aftereffects<br><i>coming soon</i></p>
+                        </div>
+                    </li>
+                  	<li>
+                    	<h5>Self-Portrait / 2009</h5>
+                        <img src="img/thumbnails/DMG_thumbnail.png">
+                        <div>
+							<p>An information design exercise using facts collected about my life<br><i>coming soon</i></p>
+                        </div>
+                    </li>
+				</ul>
+                -->
+                <ul class="mobile_projects">
+					<li>
+                        <img src="img/thumbnails/c1Labs_thumbnail.png">
+                        <h5>Capital One Labs / current</h5>
+                        <div>
+                            <p>Reimagining how people interact with their money through research, design, and product experimentation<br><i>coming soon</i></p>
+                        </div>
+                    </li>
+                  	<li style="display:none">
+                    	<img src="img/thumbnails/polonius_thumbnail.png">
+                        <h5>Polonius / 2015</h5>
+                        <div>
+                            <p>A product platform that helps people use credit wisely<br><i>coming soon</i></p>
+                        </div>
+                    </li>
+                  	<li style="display:none">
+                    	<img src="img/thumbnails/livingmoney_thumbnail.png">
+                        <h5>Living Money / 2013</h5>
+                        <div>
+                            <p>A checking product that uses a smart algorithm to help people know how much money they have after their monthly obligations<br><i>coming soon</i></p>
+                        </div>
+                    </li>
+                  	<li>
+                    	<img src="img/thumbnails/foodconscious_thumbnail.png">
+                        <h5>FoodConscious / 2011</h5>
+                        <div>
+                            <p>A service that brings together grocery store owners and shoppers to enhance access to healthy food <br><i>coming soon</i></p>
+                        </div>
+                    </li>
+                  	<li onclick="javascript:location.href='work.html'">
+                        <img src="img/thumbnails/dmg_thumbnail.png">                    
+                    	<h5>DMG Website / 2012</h5>
+                        <div>
+							<p>A website that connects Dupage Medical Group’s physicians and their patients through flowing, relatable health content<br><i>coming soon</i></p>
+                        </div>
+                    </li>
+                  	<li>
+                    	<img src="img/thumbnails/guru_thumbnail.png">
+                        <h5>GURU / 2010</h5>
+                        <div>
+							<p>A service that connects teens with creative professionals to develop future career aspirations<br>coming soon</i></p>
+                        </div>
+                    </li>
+                  	<li>
+                    	<img src="img/thumbnails/motion_thumbnail.png">
+                    	<h5>Motion Design</h5>
+                        <div>
+							<p>A selection of animation and motion design projects done in Aftereffects<br><i>coming soon</i></p>
+                        </div>
+                    </li>
+                  	<li>
+                    	<img src="img/thumbnails/self-portrait_thumbnail.png">
+                    	<h5>Self-Portrait / 2009</h5>
+                        <div>
+							<p>An information design exercise using facts collected about my life<br><i>coming soon</i></p>
+                        </div>
+                    </li>
+				</ul>
+           </div>
+      </div>
+      
+      <div class="container-process" id="process">
+      		<div class="container">
+            	<h3>Process</h3>
+                <div style="overflow:hidden; position:relative">
+                <img src="img/fuzzyFrontend.png" id="fuzzy">
+                </div>
+                <ul>
+                	  <li>
+                      <h6>1 Empathize</h6>
+                      <p>use ethnographic research to understand peoples’ pain points and latent unmet needs</p>
+                    </li><li>
+                         <h6>2 Ideate</h6>
+                      	<p>ideate potential solutions that address those pain points and unmet needs</p>
+                    </li><li>
+                      <h6>3 Prototype</h6>
+                      <p>design lo-fi prototypes of the potential solutions</p>
+                    </li>
+                    <li>
+                      <h6>4 Experiment</h6>
+                      <p>conduct experiments to evaluate and narrow down to the best solution</p>
+                    </li>
+                    <li>
+                     <h6>5 Design</h6>
+                      <p>design and iterate the solution over time</p>
+                    </li>
+                </ul>
+           </div>
+      </div>
+      
+      <div class="container-about" id="about">
+            <div class="container">
+			<img src="img/sarahMara.png" id="sarah-mara" height="601px" width="474px">
+			<span>
+            <h3>About Me</h3>
+            <h4><a href="files/sarahCalandroResume_jan2016.pdf" target="_blank">download resum&eacute;<img class="download-arrow" src="img/downloadArrow.png"></a></h4>
+            <p>Hi, I'm Sarah. I’m an experience designer, human-centered researcher, former architect, and aspirational painter. I am most happy when things are in order and make sense. My yellow lab puts the world into perspective for me and I live for warm sunny days, spirulina smoothies, <a href="http://kpjayi.org/the-practice/" target="_blank">Ashtanga Yoga</a>, and trips to Southern California.</p>
+
+			<p>I'm a problem-solver at my core using design as an avenue to help solve people’s problems with more useful and delightful products and services. I ask a lot of questions, assume I know nothing, take the perspective of those with pain points I am trying to solve, and use that empathy to inspire new compelling ideas grounded and validated with consumer needs. I am also well-equipped with the tactical skills of design. </p>
+
+			<p>I currently work for <a href="http://www.capitalonelabs.com" target="_blank">Capital One Labs</a>, where I'm helping incorporate Human-Centered Design and Lean Startup methodologies into the company's approach to creating forward-thinking financial experiences. I’ve spent the past 3+ years researching peoples’ attitudes and behaviors with money, leading the design process end-to-end, and launching multiple products in market with an intent to learn and iterate on the experiences we design. It’s incredibly rewarding to impact the financial industry at a potentially massive scale—and as a result, truly help people have better financial lives. I really love what I do.</p></span>
+
+           </div>
+           <div id="footer">
+           	<div class="container">
+           		<hr>
+           		<div class="social_images">
+                	<a href="mailto:scalandro@gmail.com"><img src="img/email_icon.png"></a>
+                    <a href="http://instagram.com/scalandro" target="_blank"><img src="img/instagram_icon.png"></a>
+                    <a href="https://www.linkedin.com/in/sarahcalandro" target="_blank"><img src="img/linkedin_icon.png"></a>
+                </div>
+                	<h5 style="margin: 10px 0 10px 0;"><a style="color: rgb(247, 111, 58);" href="mailto:scalandro@gmail.com">scalandro@gmail.com</a><span style="float:right; color:#f7f7f7">&copy; 2015 Sarah Calandro</span></h5>
+              </div>
+           </div>
+      </div>
+    </div>
+    
+    <script>
+		/*var target = $('#nav-overlay');
+		var targetHeight = target.outerHeight();
+		
+		$(document).scroll(function(e){
+			var scrollPercent = 0.1 - .9*(targetHeight - window.scrollY) / targetHeight;
+			if(scrollPercent >= 0 && scrollPercent <=1){
+				target.css('opacity', scrollPercent);
+			}
+		});*/
+		var divs = $('#nav-overlay');
+		var container = $('#container-main');
+		$(window).on('scroll', function() {
+		   var st = $(this).scrollTop()/(container.height() - 11);
+		   var alpha = Math.min(1 - 0.79 * $(this).scrollTop() / container.height(), 0.9);
+          var channel = Math.round(alpha * 255);
+		   
+		   if (st <=1){
+		   		divs.css({ 'opacity' : (0.1 + st) });				
+				divs.css('background-color', 'rgb(' + channel + ',' + channel + ',' + channel + ')');
+		   }
+		   
+		   if ($(this).scrollTop() >= container.height()){
+			   divs.css('background-color', 'rgb(' + 57 + ',' + 57 + ',' + 57 + ')');
+			   divs.css('opacity', '1');
+		   }
+		});
+	</script>
+	
+     <script type="text/javascript">
+		jQuery(function($){
+				 $( '.menu-btn' ).click(function(){
+				 $('.responsive-menu').toggleClass('expand')
+				 })
+			})
+			
+		jQuery(function($){
+				 $( '.mobile-menu-link' ).click(function(){
+				 $('.responsive-menu').toggleClass('expand')
+				 })
+			})	
+		/*jQuery(function($){
+				 $( '.responsive-menu' ).click(function(){
+				 $('.responsive-menu').toggleClass('expand')
+				 })
+			})
+		*/
+			
+	</script>
+    
+    <script>
+	jQuery(document).ready(function($){
+	    $(".menu-item-has-children").append("<div class='open-menu-link open'>+</div>");
+	    $('.menu-item-has-children').append("<div class='open-menu-link close'>-</div>");
+	
+	    $('.open').addClass('visible');
+	
+	    $('.open-menu-link').click(function(e){
+	        var childMenu =  e.currentTarget.parentNode.children[1];
+	        if($(childMenu).hasClass('visible')){
+	            $(childMenu).removeClass("visible");
+	
+	            $(e.currentTarget.parentNode.children[3]).removeClass("visible");
+	            $(e.currentTarget.parentNode.children[2]).addClass("visible");
+	        } else {
+	            $(childMenu).addClass("visible");
+	
+	            $(e.currentTarget.parentNode.children[2]).removeClass("visible");
+	            $(e.currentTarget.parentNode.children[3]).addClass("visible");
+	        }
+	    });
+	});
+</script>
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-59782907-1', 'auto');
+	  ga('send', 'pageview');
+	
+	</script>
+  </body>
+</html>

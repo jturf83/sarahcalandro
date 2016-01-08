@@ -1,0 +1,271 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+height: 100%;
+font-family: "proxima-nova",sans-serif;
+font-style: normal;
+font-weight: 100;
+/* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+/* Negative indent footer by it's height */
+margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+height: 60px;
+}
+#footer {
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+#footer {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+}
+
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+* {
+	font-weight: 100;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-style: normal;
+	font-weight: 100;
+	color: #1d2226;
+	margin: 0;
+}
+
+hr {
+	color: #d5d5d5;
+	border-bottom: 0px;
+	margin: 25px 0 25px 0;
+}
+
+#wrap > .container {
+padding-top: 90px;
+}
+.container .credit {
+margin: 0;
+}
+
+code {
+font-size: 80%;
+}
+
+.translucent {
+	background: #e0e0e0;
+	opacity: 0.1;
+}
+
+.navbar {
+	height: 100px;
+}
+
+a:link, a:visited, a:active {
+	text-decoration: none;
+	color: #f7f7f7;
+	font-weight: 200;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.navbar img {
+	margin: 18px 0 0 99px;
+	float: left;
+	color: #ffffff;
+}
+
+.navbar ul {
+	float: right;
+	list-style:none;
+	margin: 38px 100px;
+}
+
+.navbar li {
+	display: inline;
+	font-size: 24px;
+	padding-left: 30px;
+	letter-spacing: 3px;
+}
+
+h2 {
+	letter-spacing: 3px;
+	font-size: 60px;
+	line-height: 80px;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 100px;
+	width: 960px;
+	margin: 0 auto;
+}
+
+h3 {
+	text-transform: uppercase;
+	font-size: 36px;
+	line-height: 36px;
+	border-bottom: 1px solid #f7f7f7;
+	padding: 100px 0 20px 0;
+	color: #f7f7f7;
+}
+
+h4 {
+	color: #f7f7f7;
+	position: relative;
+	top: -55px;
+	float: right;
+}
+
+.muted {
+	text-align: center;
+}
+
+.container-main {
+}
+
+.container-main img {
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 100px;
+}
+
+.container-about {
+	width: 100%;
+	background: #393939;
+}
+
+.container-about h3 {
+	margin-left: 506px;
+}
+
+.container-about p {
+	margin: 30px 0 0 506px;
+	font-size: 17px;
+	line-height: 30px;
+	color: #f7f7f7;
+}
+
+.container-projects {
+	width: 100%;
+	background: #d5d5d5;
+}
+
+.container-projects img {
+	height: 292px;
+	width: 292px;
+	position: relative;
+}
+
+.container-projects h4 { 
+   font-size: 15px;
+   text-transform: uppercase;
+   color: #f7f7f7;
+   background: #393939;
+   opacity: .9;
+   width: 208px;
+   position: relative;
+   padding: 15px 0 15px 13px;
+}
+
+.container-projects ul {
+	list-style: none;
+	margin: 40px 0 83px 0;
+}
+
+.container-projects li {
+	display: inline-block;
+	margin: 0 6px 0 0;
+}
+
+.container-projects li.last {
+	margin: 0 0 10px 0;
+}
+
+.container-projects h3 {
+	color: #393939;
+	border-color: #393939;
+}
+
+.container-process {
+	width: 100%;
+	/*background: #6cb6c1;*/
+	background: url(../img/processBkg.png) no-repeat;
+	background-size: cover;
+	padding-bottom: 100px;
+}
+
+.container-process ul {
+	list-style: none;
+	margin: 350px 0 0 20px;
+}
+
+.container-process li {
+	display: inline-block;
+	width: 190px;
+	margin-right: 53px;
+	vertical-align: top;
+}
+
+.container-process li.last {
+	margin-right: 0;
+}
+
+.container-process h5 {
+	font-size: 36px;
+	font-weight: 300;
+	color: #393939;
+}
+
+.container-process h6 {
+	font-size: 24px;
+	font-weight: 300;
+	margin-top: 20px;
+	color: #393939;
+}
+
+.container-process p {
+	color: #f7f7f7;
+	margin-top: 10px;
+	line-height: 30px;
+	font-size: 17px;
+}
+
+.download-arrow {
+	padding-left: 10px;
+}
+
+#fuzzy {
+	margin: 30px 0 0 0;
+	position: absolute;
+}
+
+#sarah-mara {
+	float: left;
+	margin: 80px 0 0 0;
+}
+
+#timeline {
+	clear: both;
+	margin: 25px 0 0 0;
+}

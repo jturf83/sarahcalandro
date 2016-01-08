@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sarah Calandro - IXD & UX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link rel="shortcut icon" href="http://www.sarahcalandro.com/favicon.ico" />
+
+    <!-- CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/calandro.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    
+    <!-- TypeKit -->
+	<script type="text/javascript" src="//use.typekit.net/eev5cer.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+  	<!-- All JavaScript at the bottom, except for Modernizr. -->
+  	<script type="text/javascript" src="js/libs/modernizr.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.js"></script>
+    <script type="text/javascript" src="js/libs/jquery.backstretch.min.js"></script>	
+    <script>
+		$(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+				|| location.hostname == this.hostname) {
+		
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			  if (target.length) {
+				$('html,body').animate({
+				  scrollTop: target.offset().top-100
+				}, 1000);
+				return false;
+			  }
+			}
+		  });
+		});
+	</script>
+    
+    <script>
+		function loadResize () {
+			var windowHeight = document.body.offsetHeight;
+			
+			var $main = $('#container-main');
+			var $projects = $('#projects');
+			var $process = $('#process');
+			var $about = $('#about');
+			var $intro = $('#intro');
+			var $header = $('#nav-overlay');
+			
+			var padding = ((windowHeight - $header.height() - $intro.height()) / 2) - 50;
+			
+			$main.css({'min-height': windowHeight});
+			//$projects.css({'min-height': windowHeight});
+			//$process.css({'min-height': windowHeight});
+			$about.css({'min-height': windowHeight});
+			$intro.css({'padding-top': padding});
+
+		}
+	</script>
+    
+    <script>
+		$(function () { 
+			var $about = $('.container-about'),
+			aboutTop = $about.offset().top + 140;  // store original top position
+			var $aboutLink = $('#about-nav');
+			
+			var $projects = $('.container-projects'),
+			projectsTop = $projects.offset().top + 140;  // store original top position
+			var $projectsLink = $('#projects-nav');
+			
+			var $process = $('.container-process'),
+			processTop = $process.offset().top + 140;  // store original top position
+			var $processLink = $('#process-nav');
+			
+			$(window).scroll(function(e){ 
+			if ($(this).scrollTop() > projectsTop ){ 
+				$projectsLink.css({'color': 'RGB(247,111,58)'}); 
+				$processLink.css({'color': '#f7f7f7'}); 
+				$aboutLink.css({'color': '#f7f7f7'});
+			} else { 
+				$projectsLink.css({'color': '#f7f7f7'}); 
+			} 
+			}); 
+			
+			$(window).scroll(function(e){ 
+			if ($(this).scrollTop() > processTop ){ 
+				$processLink.css({'color': 'RGB(247,111,58)'});
+				$projectsLink.css({'color': '#f7f7f7'});
+				$aboutLink.css({'color': '#f7f7f7'});
+			} else { 
+				$processLink.css({'color': '#f7f7f7'}); 
+			} 
+			}); 
+			
+			$(window).scroll(function(e){ 
+			if ($(this).scrollTop() > aboutTop ){ 
+				$aboutLink.css({'color': 'RGB(247,111,58)'});
+				$projectsLink.css({'color': '#f7f7f7'});
+				$processLink.css({'color': '#f7f7f7'}); 
+			} else { 
+				$aboutLink.css({'color': '#f7f7f7'}); 
+			} 
+			});
+		});</script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body onLoad="loadResize()">
+
+
+    <!-- Content wrapper -->
+    <div id="wrap">
+
+      <!-- Fixed navbar -->
+      <div id="nav-overlay" class="navbar navbar-fixed-top translucent">
+      		&nbsp;
+      </div>
+      <div class="navbar navbar-fixed-top">
+			<a href="#wrap"><img src="img/sc_logo.png"></a>
+			<ul>
+           	<li><a href="#projects" id="projects-nav">projects</a></li>
+            	<li><a href="#process" id="process-nav">process</a></li>
+				<li><a href="#about" id="about-nav">about me</a></li>
+          </ul>
+      </div>
+
+      <!-- Begin page content -->
+      <div class="container container-main" id="container-main">
+        <h2 id="intro">Build empathy first;<br> ask lots of questions and seek to understand why. Then, you can design</h2>
+        <a href="#projects"><img src="img/downArrow.png"></a>
+      </div>
+      
+      <div class="container-projects" id="projects">
+      		<div class="container">
+            	<h3>Projects</h3>
+				<ul>
+					<li><img src="img/thesiss_gallerythumb.jpg"></li>
+                  <li><img src="img/gurus_gallerythumb.jpg"></li>
+                  <li><img src="img/dmg_gallerythumb.jpg"></li>
+                  <li class="last"><img src="img/bosch_gallerythumb.jpg"></li>
+                  <li><img src="img/bowsprits_gallerythumb.jpg"></li>
+                  <li><img src="img/self-portrait_gallerythumb.png"></li>
+                  <li><img src="img/liemburgs_gallerythumb.jpg"></li>
+                  <li class="last"><img src="img/architecture_gallerythumb.jpg"></li>
+				</ul>
+           </div>
+      </div>
+      
+      <div class="container-process" id="process">
+      		<div class="container">
+            	<h3>Process</h3>
+                <img src="img/fuzzyFrontEnd.png" id="fuzzy">
+                <ul>
+                	  <li>
+                      <h5>1</h5>
+                      <h6>explore</h6>
+                      <p>use ethnographic research to understand peoples’ pain points and latent unmet needs</p>
+                    </li><li>
+                    		<h5>2</h5>
+                         <h6>ideate</h6>
+                      	<p>generate many solutions that address the pain points and latent unmet needs</p>
+                    </li><li>
+                    	<h5>3</h5>
+                      <h6>prototype</h6>
+                      <p>build lo-fi prototypes of the ideated concepts; get feedback from people to see what resonates </p>
+                    </li>
+                    <li>
+                    	<h5>4</h5>
+                      <h6>test & evaluate</h6>
+                      <p>test and refine at a higher fidelity as the concept is validated with the people experiencing pain points</p>
+                    </li>
+                    <li class="last">
+                    	<h5>5</h5>
+                     <h6>execute</h6>
+                      <p>build a fully functioning and scalable prototype; continue to test, refine, and validate over time</p>
+                    </li>
+                </ul>
+           </div>
+      </div>
+      
+      <div class="container-about" id="about">
+            <div class="container">
+			<img src="img/sarahMara.png" id="sarah-mara" height="638px" width="466px">
+			<span>
+            <h3>Hi, I'm Sarah</h3>
+            <h4>download resum&eacute;<img class="download-arrow" src="img/downloadArrow.png"></h4>
+            <p>I’m a UX designer, human-centered researcher, former architect, and aspirational spring-roll maker. I am most happy when things are in order and make sense. My yellow lab puts the world into perspective for me and I live for warm sunny days, spirulina smoothies, Ashtanga Yoga, and trips to Southern California.</p>
+
+			<p>I’m never really satisfied with the current state; as most things have an opportunity to be better, more efficient, and more person-centric. Whether you’re looking to go out into the world to understand what people really care about, translate persona insights into value propositions, or build wireframes around scenarios that tell a real story, I’m your lady.</p>
+
+			<p>I currently work for <a href="http://www.capitalonelabs.com" target="_blank">Capital One Labs</a> in the Washington DC area. I’m helping rethink the way people interact with their money while also helping infuse Design Thinking methodologies into Capital One’s overall product development process. I really love what I do.</p></span>
+            
+           <img id="timeline" src="img/timeline.png">
+
+
+           </div>
+           <div id="footer">
+           	<div class="container">
+           		<hr>
+           		<img src="img/social.png">
+                	<h5 style="margin: 10px 0 10px 0;"><a style="color: rgb(247, 111, 58);" href="mailto:scalandro@gmail.com">scalandro@gmail.com</a><span style="float:right; color:#f7f7f7">&copy; 2014 Sarah Calandro</span></h5>
+              </div>
+           </div>
+      </div>
+    </div>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script src="_resources/js/jquery.slides.min.js"></script>
+    <script>
+		// Create an array of images that you'd like to use
+		var images = [
+			'img/homeBackground.jpg'
+        
+		];
+
+		// Sort the images randomly
+		images.sort(function() {return 0.5 - Math.random()});
+
+		// Load the array of images
+		$.backstretch(images, {fade:1000, duration:5000});
+	</script>
+    
+    <script>
+		/*var target = $('#nav-overlay');
+		var targetHeight = target.outerHeight();
+		
+		$(document).scroll(function(e){
+			var scrollPercent = 0.1 - .9*(targetHeight - window.scrollY) / targetHeight;
+			if(scrollPercent >= 0 && scrollPercent <=1){
+				target.css('opacity', scrollPercent);
+			}
+		});*/
+		var divs = $('#nav-overlay');
+		var container = $('#container-main');
+		$(window).on('scroll', function() {
+		   var st = $(this).scrollTop()/(container.height() - 11);
+		   var alpha = Math.min(1 - 0.79 * $(this).scrollTop() / container.height(), 0.9);
+          var channel = Math.round(alpha * 255);
+		   
+		   if (st <=1){
+		   		divs.css({ 'opacity' : (0.1 + st) });				
+				divs.css('background-color', 'rgb(' + channel + ',' + channel + ',' + channel + ')');
+		   }
+		   
+		   if ($(this).scrollTop() >= container.height()){
+			   divs.css('background-color', 'rgb(' + 57 + ',' + 57 + ',' + 57 + ')');
+			   divs.css('opacity', '1');
+		   }
+		});
+	</script>
+
+  </body>
+</html>
